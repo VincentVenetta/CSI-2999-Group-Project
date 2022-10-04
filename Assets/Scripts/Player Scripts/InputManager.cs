@@ -22,32 +22,27 @@ public class InputManager : MonoBehaviour
     public bool rightReleased { get; private set; }
     #endregion
 
-    // Called when the script is loaded or enabled
     private void Awake()
     {
         inputController = new InputController();
         SetupInputs();
     }
 
-    // Called when the script is enabled
     private void OnEnable()
     {
         inputController.Enable();
     }
 
-    // Called when the script is disabled
     private void OnDisable()
     {
         inputController.Disable();
     }
 
-    // Called once per frame
     void Update()
     {
         GetHeldInputs();
     }
 
-    // Called towards the end of execution order
     private void LateUpdate()
     {
         ResetInputs(); //Inputs reset in LateUpdate() to allow other scripts to read them on time

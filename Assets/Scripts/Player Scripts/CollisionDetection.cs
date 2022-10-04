@@ -6,7 +6,6 @@ public class CollisionDetection : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     public bool isGrounded {get; private set;}
 
-    // Called once per frame
     void Update()
     {
         isGrounded = CheckIfGrounded();
