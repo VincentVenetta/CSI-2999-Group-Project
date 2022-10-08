@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
+    #region Reference Variables
     private InputController inputController;
+    #endregion
 
     #region Input Variables
     public bool upPressed { get; private set; }
@@ -45,7 +47,7 @@ public class InputManager : MonoBehaviour
 
     private void LateUpdate()
     {
-        ResetInputs(); //Inputs reset in LateUpdate() to allow other scripts to read them on time
+        ResetInputs(); //Inputs reset in LateUpdate() to allow other scripts to read them in their update method
     }
 
     ///<Summary>Setup callback functions for retrieving player input.</Summary>
