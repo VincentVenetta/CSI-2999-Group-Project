@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - stomper
+  - item
+  - Walls
   layers:
   - Default
   - TransparentFX
@@ -12,8 +16,13 @@ TagManager:
   - Water
   - UI
   - Ground
+<<<<<<< Updated upstream
   - 
   - 
+=======
+  - Walls
+  - Grabbable
+>>>>>>> Stashed changes
   - 
   - 
   - 
@@ -38,6 +47,27 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: background
+    uniqueID: 1061649057
+    locked: 0
+  - name: middle
+    uniqueID: 792835997
+    locked: 0
+  - name: background1
+    uniqueID: 3219355255
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 1180780425
+    locked: 0
+  - name: Game
+    uniqueID: 3616325353
+    locked: 0
+  - name: Foreground
+    uniqueID: 1099304405
+    locked: 0
+  - name: UI
+    uniqueID: 1437074409
     locked: 0
