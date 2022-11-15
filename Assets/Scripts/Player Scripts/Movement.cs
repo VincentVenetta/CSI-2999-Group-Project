@@ -8,12 +8,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private Rigidbody2D playerRigidBody;
     [SerializeField] private AudioManager audioManager;
     #endregion
-<<<<<<< Updated upstream
     
-=======
-    public Animator animator;
-    public float Speed = 0.5f;
->>>>>>> Stashed changes
     #region Movement Variables
     private float accelerationRate = 14f;
     private float decelerationRate = 1.05f;
@@ -54,11 +49,6 @@ public class Movement : MonoBehaviour
             playerRigidBody.AddForce(jumpForce * Vector2.up, ForceMode2D.Impulse);
 
             audioManager.Play("Player Jump");
-<<<<<<< Updated upstream
-=======
-            //bool for jumping to set animation active
-            animator.SetBool("IsJumping", true);
->>>>>>> Stashed changes
         }
         
         //Double jump
@@ -71,16 +61,6 @@ public class Movement : MonoBehaviour
             hasDoubleJumped = true;
 
             audioManager.Play("Player Jump");
-<<<<<<< Updated upstream
-=======
-            //bool for jumping to set animation active
-            animator.SetBool("IsJumping", true);
-        }
-        else
-        {
-            //animation stops when not jumping
-            animator.SetBool("IsJumping", false);
->>>>>>> Stashed changes
         }
     }
 
