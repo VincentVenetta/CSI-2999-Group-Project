@@ -155,7 +155,7 @@ public class Movement : MonoBehaviour
     ///<Summary>Play a sound when the player is moving after a set amount of time.</Summary>
     private void MovingSfx()
     {
-        //TODO make this equation less terrible and scale better
+        //TODO make this equation less terrible
         float stepDelay = 0.90f - Mathf.Clamp((Mathf.Abs(playerRigidBody.velocity.x) / 15f), 0f, 0.75f);
         
         timeSinceLastStep += Time.deltaTime;
