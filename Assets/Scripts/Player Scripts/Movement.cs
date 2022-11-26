@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private Rigidbody2D playerRigidBody;
     [SerializeField] private AudioManager audioManager;
     [SerializeField] private LevelLoader levelLoader;
+    [SerializeField] private Dialogue dialogue;
     #endregion
     
     #region Movement Variables
@@ -29,18 +30,30 @@ public class Movement : MonoBehaviour
 
     private void Update()
     {
-        Jump();
-        WallJump();
-        TrackAirTime();
-        PlayerLanded();
-        TrackGroundTime();
-        EnterNextLevel();
+        //Disables mechanics during dialogue
+        if (dialogue.canMove)
+        {
+            Jump();
+            WallJump();
+            TrackAirTime();
+            PlayerLanded();
+            TrackGroundTime();
+            EnterNextLevel();
+        }
+
+
+        
     }
 
     private void FixedUpdate()
     {
-        Accelerate();
-        Decelerate();
+        //Disables movement during dialogue
+        if (dialogue.canMove)
+        {
+            Accelerate();
+            Decelerate();
+        }
+       
     }
 
     ///<Summary>Applies an upwards impulse force when on the ground.</Summary>
