@@ -266,6 +266,61 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &500992199
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 500992201}
+  - component: {fileID: 500992200}
+  m_Layer: 0
+  m_Name: DialogueManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &500992200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500992199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227395102ba62cb4d8ff5bf83bb10749, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textDisplay: {fileID: 0}
+  sentences:
+  - Wanna see something cool? Click continue
+  - WOW! A dialogue box! Now we can have full fledge conversations
+  - Well... more like I can force you to listen to my stories all day
+  - 'because well, I disabled your movement until I''m done here. '
+  - Go ahead, try and move, you can't. You're stuck here with me
+  - Isn't that wonderful!? Okay okay go do some wall jumps
+  typingSpeed: 0.02
+  canMove: 0
+  DialogueBox: {fileID: 0}
+  continueButton: {fileID: 0}
+--- !u!4 &500992201
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500992199}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 583.0759, y: 128.71169, z: -1731.3828}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &664153704
 GameObject:
   m_ObjectHideFlags: 0
@@ -2184,6 +2239,7 @@ MonoBehaviour:
   playerRigidBody: {fileID: 622485043232411508}
   audioManager: {fileID: 348279734}
   levelLoader: {fileID: 1418171090}
+  dialogue: {fileID: 500992200}
 --- !u!1 &622485043610867680
 GameObject:
   m_ObjectHideFlags: 0
