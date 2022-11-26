@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -16,20 +15,27 @@ public class Dialogue : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(Type());
+        if(DialogueBox != null)
+        {
+            StartCoroutine(Type());
+        }
     }
 
     void Update()
     {
-        //shows the button after each sentence
-        if(textDisplay.text == sentences[index]){
-            continueButton.SetActive(true);
+        if(DialogueBox != null)
+        {
+            //Shows the button after each sentence
+            if(textDisplay.text == sentences[index])
+            {
+                continueButton.SetActive(true);
+            }
         }
     }
 
     IEnumerator Type()
     {
-        //loops through each char making the animation effect of dialogue
+        //Loops through each char making the animation effect of dialogue
         foreach(char letter in sentences[index].ToCharArray())
         {
             textDisplay.text += letter;
@@ -37,14 +43,12 @@ public class Dialogue : MonoBehaviour
         }
     }
 
-   
-
     public void NextSentence()
     {
-        //hides the button while dialogue is being written
+        //Hides the button while dialogue is being written
         continueButton.SetActive(false);
 
-        //checks if sentence has ended, if so clears and starts new sentence
+        //Checks if sentence has ended, if so clears and starts new sentence
         if(index < sentences.Length - 1)
         {
             index++;
@@ -61,6 +65,4 @@ public class Dialogue : MonoBehaviour
 
         }
     }
-
-
 }
