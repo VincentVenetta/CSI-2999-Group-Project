@@ -5,6 +5,7 @@ using System.Collections;
 public class LevelLoader : MonoBehaviour
 {
     [SerializeField] private Animator fadeTransition;
+    [SerializeField] private Animator musicTransition;
     public float transitionTime = 1f;
 
     ///<Summary>Load the next level based on build index order.</Summary>
@@ -17,6 +18,11 @@ public class LevelLoader : MonoBehaviour
     private IEnumerator LoadLevel(int _levelIndex)
     {
         fadeTransition.SetTrigger("Start");
+
+        if (musicTransition != null)
+        {    
+            musicTransition.SetTrigger("Stop");
+        }
 
         yield return new WaitForSeconds(transitionTime);
 

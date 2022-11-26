@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class MainMenuButtonHandler : MonoBehaviour
 {
-    [SerializeField] LevelLoader levelLoader;
+    [SerializeField] private LevelLoader levelLoader;
+    [SerializeField] private AudioManager audioManager;
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject levelMenu;
     [SerializeField] private GameObject creditsMenu;
@@ -47,5 +48,23 @@ public class MainMenuButtonHandler : MonoBehaviour
     public void OnQuitButtonPressed()
     {
         Application.Quit();
+    }
+
+    ///<Summary>Play button clicking noise one.</Summary>
+    public void PlayClickOne()
+    {
+        audioManager.Play("Click One");
+    }
+
+    ///<Summary>Play button clicking noise two.</Summary>
+    public void PlayClickTwo()
+    {
+        audioManager.Play("Click Two");
+    }
+
+    ///<Summary>Play button clicking noise three.</Summary>
+    public void PlayClickThree()
+    {
+        audioManager.Play("Click Three");
     }
 }
