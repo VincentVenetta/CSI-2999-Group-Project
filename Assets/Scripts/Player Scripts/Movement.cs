@@ -30,8 +30,11 @@ public class Movement : MonoBehaviour
 
     private void Update()
     {
+
+        Debug.Log(SceneManager.GetActiveScene().buildIndex.ToString());
+
         //Disables mechanics during dialogue
-        if (dialogue.canMove)
+        if (dialogue.canMove || SceneManager.GetActiveScene().buildIndex < 7)
         {
             Jump();
             WallJump();
@@ -48,7 +51,7 @@ public class Movement : MonoBehaviour
     private void FixedUpdate()
     {
         //Disables movement during dialogue
-        if (dialogue.canMove)
+        if (dialogue.canMove || SceneManager.GetActiveScene().buildIndex < 7)
         {
             Accelerate();
             Decelerate();
@@ -84,8 +87,7 @@ public class Movement : MonoBehaviour
         }
 
         //Double jump
-        if (inputManager.upPressed && !collisionDetection.isGrounded && !hasDoubleJumped
-            && !collisionDetection.wallLeft && !collisionDetection.wallRight)
+        if (inputManager.upPressed && !collisionDetection.isGrounded && !hasDoubleJumped)
         {
             playerRigidBody.velocity = new Vector2(playerRigidBody.velocity.x, 0f);
             playerRigidBody.AddForce(jumpForce * Vector2.up, ForceMode2D.Impulse);
@@ -125,7 +127,7 @@ public class Movement : MonoBehaviour
     private void WallJump()
     {
         //Lock wall jumping until level 6
-        if (SceneManager.GetActiveScene().buildIndex < 5)
+        if (SceneManager.GetActiveScene().buildIndex < 6)
         {
             return;
         }
@@ -134,6 +136,7 @@ public class Movement : MonoBehaviour
         {
             playerRigidBody.velocity = new Vector2(playerRigidBody.velocity.x, 0f);
             playerRigidBody.AddForce(wallJumpForce * (Vector2.up + Vector2.right).normalized, ForceMode2D.Impulse);
+            hasDoubleJumped = false;
 
             audioManager.Play("Player Jump");
         }
@@ -142,6 +145,7 @@ public class Movement : MonoBehaviour
         {
             playerRigidBody.velocity = new Vector2(playerRigidBody.velocity.x, 0f);
             playerRigidBody.AddForce(wallJumpForce * (Vector2.up + Vector2.left).normalized, ForceMode2D.Impulse);
+            hasDoubleJumped = false;
 
             audioManager.Play("Player Jump");
         }
