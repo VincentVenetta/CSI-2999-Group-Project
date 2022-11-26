@@ -8,6 +8,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private CollisionDetection collisionDetection;
     [SerializeField] private Rigidbody2D playerRigidBody;
     [SerializeField] private AudioManager audioManager;
+    [SerializeField] private LevelLoader levelLoader;
     #endregion
     
     #region Movement Variables
@@ -33,6 +34,7 @@ public class Movement : MonoBehaviour
         TrackAirTime();
         PlayerLanded();
         TrackGroundTime();
+        EnterNextLevel();
     }
 
     private void FixedUpdate()
@@ -55,7 +57,11 @@ public class Movement : MonoBehaviour
         {
             playerRigidBody.AddForce(jumpForce * Vector2.up, ForceMode2D.Impulse);
 
-            audioManager.Play("Player Jump");
+            //Lock sfx until level 4
+            if (SceneManager.GetActiveScene().buildIndex >= 4)
+            {                
+                audioManager.Play("Player Jump");
+            }
         }
         
         //Lock double jumping until level 5
@@ -89,15 +95,14 @@ public class Movement : MonoBehaviour
     ///<Summary>Handle variables and sound effects for when the player lands after a fall or jump.</Summary>
     private void PlayerLanded()
     {
-        //Lock sfx until level 4
-        if (SceneManager.GetActiveScene().buildIndex > 2)
-        {
-            return;
-        }
-
         if (collisionDetection.isGrounded && (timeInAir >= 0.25f))
         {
-            audioManager.Play("Player Landed");
+            //Lock sfx until level 4
+            if (SceneManager.GetActiveScene().buildIndex >= 4)
+            {
+                audioManager.Play("Player Landed");
+            }
+        
             hasDoubleJumped = false;
             timeInAir = 0f;
         }
@@ -146,7 +151,7 @@ public class Movement : MonoBehaviour
             }
 
             //Lock sfx until level 4
-            if (SceneManager.GetActiveScene().buildIndex > 4)
+            if (SceneManager.GetActiveScene().buildIndex >= 4)
             {
                 MovingSfx();
             }
@@ -162,7 +167,7 @@ public class Movement : MonoBehaviour
             }
             
             //Lock sfx until level 4
-            if (SceneManager.GetActiveScene().buildIndex > 3)
+            if (SceneManager.GetActiveScene().buildIndex >= 4)
             {
                 MovingSfx();
             }
@@ -187,7 +192,7 @@ public class Movement : MonoBehaviour
             }
 
             //Lock sfx until level 4
-            if (SceneManager.GetActiveScene().buildIndex > 3)
+            if (SceneManager.GetActiveScene().buildIndex >= 4)
             {
                 MovingSfx();
             }
@@ -222,6 +227,22 @@ public class Movement : MonoBehaviour
         {
             timeOnGround = 0f;
             timeSinceLastStep = 1f;
+        }
+    }
+
+    ///<Summary>Execute code requried to enter the next level.</Summary>
+    private void EnterNextLevel()
+    {
+        if (collisionDetection.touchingPortal)
+        {   
+            //Lock sfx until level 4
+            if (SceneManager.GetActiveScene().buildIndex >= 4 && (levelLoader.portalSoundPlayed == false))
+            {
+                levelLoader.portalSoundPlayed = true;
+                audioManager.Play("Portal");
+            }
+
+            levelLoader.LoadNextLevel();
         }
     }
 }

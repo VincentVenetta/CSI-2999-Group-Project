@@ -6,6 +6,7 @@ public class LevelLoader : MonoBehaviour
 {
     [SerializeField] private Animator fadeTransition;
     [SerializeField] private Animator musicTransition;
+    public bool portalSoundPlayed = false;
     public float transitionTime = 1f;
 
     ///<Summary>Load the next level based on build index order.</Summary>
@@ -26,6 +27,7 @@ public class LevelLoader : MonoBehaviour
 
         yield return new WaitForSeconds(transitionTime);
 
+        portalSoundPlayed = false;
         SceneManager.LoadScene(_levelIndex);
     }
 }

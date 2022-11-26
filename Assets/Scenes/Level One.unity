@@ -156,6 +156,85 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &348279733
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 348279735}
+  - component: {fileID: 348279734}
+  m_Layer: 0
+  m_Name: Audio Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &348279734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348279733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 569b5e7497a956848868e67825a867b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Player Jump
+    clip: {fileID: 8300000, guid: 7202602a902408d42bb1066a9c7e5283, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Player Walk
+    clip: {fileID: 8300000, guid: 711a93f2cfdb9d249ac3723594fdc853, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Player Landed
+    clip: {fileID: 8300000, guid: e5124dcdfc19493459ffd427eee7f984, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Click One
+    clip: {fileID: 8300000, guid: 42fb352019c20e147bc9e4b1bf594e27, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Click Two
+    clip: {fileID: 8300000, guid: 64bb2940070000343b156d70e2e2220e, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Click Three
+    clip: {fileID: 8300000, guid: bd8b1c80e345a5a49b462ee182e44bfb, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Portal
+    clip: {fileID: 8300000, guid: 93cd15011510d2f4191845be77baef8b, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+--- !u!4 &348279735
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348279733}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &424423776
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,7 +244,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 424423777}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Portal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,7 +264,7 @@ Transform:
   m_Children:
   - {fileID: 1650135015}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &664153704
 GameObject:
@@ -641,65 +720,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &920326621
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 920326623}
-  - component: {fileID: 920326622}
-  m_Layer: 0
-  m_Name: Audio Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &920326622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 920326621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 569b5e7497a956848868e67825a867b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: Player Jump
-    clip: {fileID: 8300000, guid: 7202602a902408d42bb1066a9c7e5283, type: 3}
-    volume: 1
-    pitch: 1
-    source: {fileID: 0}
-  - name: Player Walk
-    clip: {fileID: 8300000, guid: 711a93f2cfdb9d249ac3723594fdc853, type: 3}
-    volume: 1
-    pitch: 1
-    source: {fileID: 0}
-  - name: Player Landed
-    clip: {fileID: 8300000, guid: e5124dcdfc19493459ffd427eee7f984, type: 3}
-    volume: 1
-    pitch: 1
-    source: {fileID: 0}
---- !u!4 &920326623
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 920326621}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.28197896, y: -0.81981736, z: -6.5937166}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1068370823
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,7 +751,7 @@ Transform:
   - {fileID: 1495655218}
   - {fileID: 1472640178}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1287329466
 GameObject:
@@ -833,6 +853,17 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1418171090 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3747297601719953980, guid: bd9c4055c6ebf59488b0d3df77558f1e, type: 3}
+  m_PrefabInstance: {fileID: 1490237100}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ca140ddedad15f43be3a3137b5c8a58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1422785462
 GameObject:
   m_ObjectHideFlags: 0
@@ -1219,7 +1250,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1650135015}
   - component: {fileID: 1650135016}
-  m_Layer: 0
+  - component: {fileID: 1650135017}
+  m_Layer: 8
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1292,6 +1324,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1650135017
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650135014}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8.59, y: 8.4}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 8.59, y: 8.4}
+  m_EdgeRadius: 0
 --- !u!1 &1777053945
 GameObject:
   m_ObjectHideFlags: 0
@@ -1934,7 +1992,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &622485043232411508
 Rigidbody2D:
@@ -2064,6 +2122,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  portalLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!4 &622485043232411514
 Transform:
   m_ObjectHideFlags: 0
@@ -2121,7 +2182,8 @@ MonoBehaviour:
   inputManager: {fileID: 622485043232411518}
   collisionDetection: {fileID: 622485043232411513}
   playerRigidBody: {fileID: 622485043232411508}
-  audioManager: {fileID: 920326622}
+  audioManager: {fileID: 348279734}
+  levelLoader: {fileID: 1418171090}
 --- !u!1 &622485043610867680
 GameObject:
   m_ObjectHideFlags: 0
