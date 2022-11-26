@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
@@ -43,6 +44,12 @@ public class Movement : MonoBehaviour
     ///<Summary>Applies an upwards impulse force when on the ground.</Summary>
     private void Jump()
     {
+        //Lock jumping until level 3
+        if (SceneManager.GetActiveScene().buildIndex < 3)
+        {
+            return;
+        }
+
         //Initial jump
         if (inputManager.upPressed && collisionDetection.isGrounded)
         {
@@ -51,6 +58,12 @@ public class Movement : MonoBehaviour
             audioManager.Play("Player Jump");
         }
         
+        //Lock double jumping until level 5
+        if (SceneManager.GetActiveScene().buildIndex < 5)
+        {
+            return;
+        }
+
         //Double jump
         if (inputManager.upPressed && !collisionDetection.isGrounded && !hasDoubleJumped
             && !collisionDetection.wallLeft && !collisionDetection.wallRight)
@@ -76,6 +89,12 @@ public class Movement : MonoBehaviour
     ///<Summary>Handle variables and sound effects for when the player lands after a fall or jump.</Summary>
     private void PlayerLanded()
     {
+        //Lock sfx until level 4
+        if (SceneManager.GetActiveScene().buildIndex > 2)
+        {
+            return;
+        }
+
         if (collisionDetection.isGrounded && (timeInAir >= 0.25f))
         {
             audioManager.Play("Player Landed");
@@ -87,6 +106,12 @@ public class Movement : MonoBehaviour
     ///<Summary>Apply a force upwards and away from the wall the player is currently against while in the air.</Summary>
     private void WallJump()
     {
+        //Lock wall jumping until level 6
+        if (SceneManager.GetActiveScene().buildIndex < 5)
+        {
+            return;
+        }
+
         if (collisionDetection.wallLeft && inputManager.upPressed && (timeInAir >= 0.25f))
         {
             playerRigidBody.velocity = new Vector2(playerRigidBody.velocity.x, 0f);
@@ -109,23 +134,38 @@ public class Movement : MonoBehaviour
     {
         if (inputManager.leftHeld && !inputManager.rightHeld)
         {
+            //Lock leftward movement until level 2
+            if (SceneManager.GetActiveScene().buildIndex < 2)
+            {
+                return;
+            }
+
             if (playerRigidBody.velocity.x >= -maxMovementSpeed)
             {
                 playerRigidBody.AddForce(accelerationRate * Vector2.left, ForceMode2D.Force);
             }
 
-            MovingSfx();
+            //Lock sfx until level 4
+            if (SceneManager.GetActiveScene().buildIndex > 4)
+            {
+                MovingSfx();
+            }
 
             isActivelyMoving = true;
         }
         else if (inputManager.rightHeld && !inputManager.leftHeld)
         {
+
             if (playerRigidBody.velocity.x <= maxMovementSpeed)
             {
                 playerRigidBody.AddForce(accelerationRate * Vector2.right, ForceMode2D.Force);
             }
-
-            MovingSfx();
+            
+            //Lock sfx until level 4
+            if (SceneManager.GetActiveScene().buildIndex > 3)
+            {
+                MovingSfx();
+            }
 
             isActivelyMoving = true;
         }
@@ -146,7 +186,11 @@ public class Movement : MonoBehaviour
                 playerRigidBody.velocity = new Vector2(0f, playerRigidBody.velocity.y);
             }
 
-            MovingSfx();
+            //Lock sfx until level 4
+            if (SceneManager.GetActiveScene().buildIndex > 3)
+            {
+                MovingSfx();
+            }
 
             playerRigidBody.velocity = new Vector2(playerRigidBody.velocity.x / decelerationRate, playerRigidBody.velocity.y);
         }
