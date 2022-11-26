@@ -76,6 +76,17 @@ public class @InputController : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""501260e4-90b9-40ac-abdd-2a0ad59cb450"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Up"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""78e1de91-32f7-441b-896d-1707051d01a6"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
