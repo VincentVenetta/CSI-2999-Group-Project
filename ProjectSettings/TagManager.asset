@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - collectable
   layers:
   - Default
   - TransparentFX
@@ -41,6 +42,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: 
+  - name: portal
+    uniqueID: 1838373257
+    locked: 0
+  - name: player
     uniqueID: 3896217765
     locked: 0

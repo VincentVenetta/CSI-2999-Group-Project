@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PickUpItems : MonoBehaviour
 {
-    private int collectables = 0;
+    public int collectables = 0;
 
     [SerializeField] public Text scoreCounter;
 

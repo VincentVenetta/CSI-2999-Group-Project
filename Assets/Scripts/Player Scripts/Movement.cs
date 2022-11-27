@@ -10,8 +10,12 @@ public class Movement : MonoBehaviour
     [SerializeField] private AudioManager audioManager;
     [SerializeField] private LevelLoader levelLoader;
     [SerializeField] private Dialogue dialogue;
+    [SerializeField] private PickUpItems pickupitems;
+
+
+
     #endregion
-    
+
     #region Movement Variables
     private float accelerationRate = 14f;
     private float decelerationRate = 1.05f;
@@ -244,16 +248,45 @@ public class Movement : MonoBehaviour
     ///<Summary>Execute code requried to enter the next level.</Summary>
     private void EnterNextLevel()
     {
-        if (collisionDetection.touchingPortal)
-        {   
-            //Lock sfx until level 4
-            if (SceneManager.GetActiveScene().buildIndex >= 4 && (levelLoader.portalSoundPlayed == false))
+        //PROBABLY A BETTER WAY TO WRITE THIS CODE THAN COPY AND PASTE
+        if(SceneManager.GetActiveScene().buildIndex <= 8)
+        {
+            //enters next level if all collectables are picked or there are no collectables
+            if (collisionDetection.touchingPortal)
             {
-                levelLoader.portalSoundPlayed = true;
-                audioManager.Play("Portal");
+
+                //Lock sfx until level 4
+                if (SceneManager.GetActiveScene().buildIndex >= 4 && (levelLoader.portalSoundPlayed == false))
+                {
+                    levelLoader.portalSoundPlayed = true;
+                    audioManager.Play("Portal");
+                }
+
+                levelLoader.LoadNextLevel();
+
+
             }
 
-            levelLoader.LoadNextLevel();
         }
+        else
+        {
+            //enters next level if all collectables are picked or there are no collectables
+            if (collisionDetection.touchingPortal && pickupitems.collectables == 3)
+            {
+
+                //Lock sfx until level 4
+                if (SceneManager.GetActiveScene().buildIndex >= 4 && (levelLoader.portalSoundPlayed == false))
+                {
+                    levelLoader.portalSoundPlayed = true;
+                    audioManager.Play("Portal");
+                }
+
+                levelLoader.LoadNextLevel();
+
+
+            }
+        }
+       
+     
     }
 }
