@@ -149,8 +149,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 103088293}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0172, y: -5.74, z: 0}
-  m_LocalScale: {x: 35.586433, y: 1, z: 1}
+  m_LocalPosition: {x: -0.1519, y: -5.74, z: 0}
+  m_LocalScale: {x: 35.924507, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1548149162}
   m_RootOrder: 0
@@ -626,7 +626,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.6901961, g: 0.6901961, b: 0.6901961, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1241,7 +1241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6886792, g: 0.6724368, b: 0.6724368, a: 1}
+  m_Color: {r: 0.3773585, g: 0.20469919, b: 0.20469919, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1801,9 +1801,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_NormalColor: {r: 0.9150943, g: 0.55298096, b: 0.12517802, a: 1}
+    m_HighlightedColor: {r: 0.6886792, g: 0.4106346, b: 0.08121216, a: 1}
+    m_PressedColor: {r: 0.745283, g: 0.33381307, b: 0.06679422, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -2235,7 +2235,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2081305313}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.27, y: 4.56, z: 0}
+  m_LocalPosition: {x: -17.5, y: 4.45, z: 0}
   m_LocalScale: {x: 1, y: 20.022411, z: 1}
   m_Children: []
   m_Father: {fileID: 1548149162}

@@ -23,6 +23,7 @@ public class Dialogue : MonoBehaviour
 
     void Update()
     {
+
         if(DialogueBox != null)
         {
             //Shows the button after each sentence
@@ -31,6 +32,7 @@ public class Dialogue : MonoBehaviour
                 continueButton.SetActive(true);
             }
         }
+        
     }
 
     IEnumerator Type()
