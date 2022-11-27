@@ -22,9 +22,14 @@ public class Dialogue : MonoBehaviour
     void Update()
     {
         //shows the button after each sentence
-        if(textDisplay.text == sentences[index]){
-            continueButton.SetActive(true);
+        if(textDisplay.text != null)
+        {
+            if (textDisplay.text == sentences[index])
+            {
+                continueButton.SetActive(true);
+            }
         }
+        
     }
 
     IEnumerator Type()
