@@ -322,7 +322,7 @@ GameObject:
   m_Component:
   - component: {fileID: 407644744}
   m_Layer: 0
-  m_Name: Menu BG Music
+  m_Name: BG Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1536,8 +1536,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1855,7 +1855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3773585, g: 0.20469919, b: 0.20469919, a: 1}
+  m_Color: {r: 0.2980392, g: 1, b: 0.3556087, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2666,12 +2666,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 928731313}
   sentences:
-  - You thought the levels were too small as well?
+  - The levels were too small you say?
   - Well no worries, now the levels can be as wide or as tall as you want them to
     be!
-  - 'With the new and IMPROVED camera! '
-  - It follows you (the Player) and watches you in your sleep
-  - Okay now you have to find the portal, good luck!
+  - 'With the help of the new and IMPROVED camera! '
+  - It follows you around and watches your every move at every moment of the day.
+  - Okay now you have to go and find the portal, good luck!
   typingSpeed: 0.02
   canMove: 0
   DialogueBox: {fileID: 1084139650}
@@ -2750,9 +2750,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.9150943, g: 0.55298096, b: 0.12517802, a: 1}
-    m_HighlightedColor: {r: 0.6886792, g: 0.4106346, b: 0.08121216, a: 1}
-    m_PressedColor: {r: 0.745283, g: 0.33381307, b: 0.06679422, a: 1}
+    m_NormalColor: {r: 0, g: 0.7830189, b: 0.4114688, a: 1}
+    m_HighlightedColor: {r: 0.1830188, g: 1, b: 0.6870961, a: 1}
+    m_PressedColor: {r: 0, g: 0.68086386, b: 1, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1

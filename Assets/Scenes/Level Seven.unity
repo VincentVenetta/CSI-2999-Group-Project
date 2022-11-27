@@ -1346,7 +1346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3773585, g: 0.20469919, b: 0.20469919, a: 1}
+  m_Color: {r: 0.066037714, g: 0.066037714, b: 0.066037714, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1822,12 +1822,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 928731313}
   sentences:
-  - Wanna see something cool? Click continue
-  - WOW! A dialogue box! Now we can have full fledge conversations
-  - Well... more like I can force you to listen to my stories all day
-  - 'because well, I disabled your movement until I''m done here. '
-  - Go ahead, try and move, you can't. You're stuck here with me
-  - Isn't that wonderful!? Okay okay go do some wall jumps
+  - Want to see something cool? Click continue.
+  - WOW! A dialogue box! Now we can have full fledged conversations
+  - Well... more like I can force you to sit and listen to my stories all day should
+    I choose to
+  - '...because well, I disabled your movement until I''m done speaking. '
+  - Go ahead, try and move, you can't. You're stuck here with me.
+  - Isn't that wonderful!? Okay okay go do some wall jumps or something
+  - (Yes, you will have to click through the dialogue every time you die lol)
+  - (We didn't have time to fix that so consider it added punishment for losing I
+    guess)
   typingSpeed: 0.02
   canMove: 0
   DialogueBox: {fileID: 1084139650}
@@ -1906,9 +1910,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.9150943, g: 0.55298096, b: 0.12517802, a: 1}
-    m_HighlightedColor: {r: 0.6886792, g: 0.4106346, b: 0.08121216, a: 1}
-    m_PressedColor: {r: 0.745283, g: 0.33381307, b: 0.06679422, a: 1}
+    m_NormalColor: {r: 0.28283036, g: 0.7924528, b: 0, a: 1}
+    m_HighlightedColor: {r: 0.9881079, g: 1, b: 0.39999998, a: 1}
+    m_PressedColor: {r: 0.9716981, g: 0.48362777, b: 0, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
