@@ -30,10 +30,7 @@ public class Movement : MonoBehaviour
 
     private void Update()
     {
-
-        Debug.Log(SceneManager.GetActiveScene().buildIndex.ToString());
-
-        //Disables mechanics during dialogue
+        //Disables movement during dialogue, but allows free movement until level 7
         if (dialogue.canMove || SceneManager.GetActiveScene().buildIndex < 7)
         {
             Jump();
@@ -43,14 +40,11 @@ public class Movement : MonoBehaviour
             TrackGroundTime();
             EnterNextLevel();
         }
-
-
-        
     }
 
     private void FixedUpdate()
     {
-        //Disables movement during dialogue
+        //Disables movement during dialogue, but allows free movement until level 7
         if (dialogue.canMove || SceneManager.GetActiveScene().buildIndex < 7)
         {
             Accelerate();
