@@ -9,6 +9,12 @@ public class LevelLoader : MonoBehaviour
     public bool portalSoundPlayed = false;
     public float transitionTime = 1f;
 
+    ///<Summary>Reload the level.</Summary>
+    public void ReloadLevel()
+    {
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex));
+    }
+
     ///<Summary>Load the next level based on build index order.</Summary>
     public void LoadNextLevel()
     {

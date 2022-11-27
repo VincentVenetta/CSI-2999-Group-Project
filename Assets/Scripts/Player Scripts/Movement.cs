@@ -249,7 +249,7 @@ public class Movement : MonoBehaviour
     private void EnterNextLevel()
     {
         //PROBABLY A BETTER WAY TO WRITE THIS CODE THAN COPY AND PASTE
-        if(SceneManager.GetActiveScene().buildIndex <= 8)
+        if(SceneManager.GetActiveScene().buildIndex <= 9)
         {
             //enters next level if all collectables are picked or there are no collectables
             if (collisionDetection.touchingPortal)
