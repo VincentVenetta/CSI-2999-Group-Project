@@ -14,7 +14,7 @@ public class PickUpItems : MonoBehaviour
         if (collision.gameObject.CompareTag("collectable")){
             Destroy(collision.gameObject);
             collectables += 1;
-            scoreCounter.text = "Score: " + collectables;
+            scoreCounter.text = "Gems: " + collectables;
         }
     }
 
