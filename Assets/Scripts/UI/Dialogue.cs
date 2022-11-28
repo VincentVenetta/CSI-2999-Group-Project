@@ -18,6 +18,12 @@ public class Dialogue : MonoBehaviour
         if(DialogueBox != null)
         {
             StartCoroutine(Type());
+            
+         
+        }
+        if (textDisplay.text == sentences[index])
+        {
+            continueButton.SetActive(true);
         }
     }
 

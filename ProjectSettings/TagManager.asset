@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Collectible
+  - platform
+  - enemy
   layers:
   - Default
   - TransparentFX
@@ -44,6 +46,9 @@ TagManager:
     locked: 0
   - name: middle
     uniqueID: 3010004177
+    locked: 0
+  - name: middlefront
+    uniqueID: 436242355
     locked: 0
   - name: Default
     uniqueID: 0
