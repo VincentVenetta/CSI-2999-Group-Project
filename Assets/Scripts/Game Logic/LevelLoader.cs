@@ -21,6 +21,12 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
+    ///<Summary>Load the specified level.</Summary>
+    public void SwitchLevel(int _levelToLoad)
+    {
+        StartCoroutine(LoadLevel(_levelToLoad));
+    }
+
     ///<Summary>Play a fading transition between levels and load the scene.</Summary>
     private IEnumerator LoadLevel(int _levelIndex)
     {
