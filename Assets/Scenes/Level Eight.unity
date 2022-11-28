@@ -1024,6 +1024,7 @@ MonoBehaviour:
   levelLoader: {fileID: 2072351437}
   dialogue: {fileID: 1815896882}
   pickupitems: {fileID: 0}
+  playerSprite: {fileID: 927336197}
 --- !u!114 &927336192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1242,8 +1243,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1522,7 +1523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3773585, g: 0.20469919, b: 0.20469919, a: 1}
+  m_Color: {r: 1, g: 0.5509434, b: 0.5509434, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2220,10 +2221,10 @@ MonoBehaviour:
   textDisplay: {fileID: 928731313}
   sentences:
   - It's quiet... almost... too quiet...
-  - Well, it used to be anyways
-  - Now you can listen to some awesome music while playing this master work of a
-    2D platformer
+  - Well, it used to be anyways.
+  - Now you can listen to some music while playing this masterwork of a 2D platformer.
   - Also, try not to fall!
+  - (I did warn you about the repeated dialogue prompts)
   typingSpeed: 0.02
   canMove: 0
   DialogueBox: {fileID: 1084139650}
@@ -2385,9 +2386,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.9150943, g: 0.55298096, b: 0.12517802, a: 1}
-    m_HighlightedColor: {r: 0.6886792, g: 0.4106346, b: 0.08121216, a: 1}
-    m_PressedColor: {r: 0.745283, g: 0.33381307, b: 0.06679422, a: 1}
+    m_NormalColor: {r: 1, g: 0.6908289, b: 0.32452828, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.18178454, b: 0, a: 1}
+    m_PressedColor: {r: 1, g: 0.35283017, b: 0.5988597, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1

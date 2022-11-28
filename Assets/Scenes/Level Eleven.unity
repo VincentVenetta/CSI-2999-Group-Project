@@ -307,6 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11157a5bbf367154c954eb77ab4ced1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelLoader: {fileID: 0}
 --- !u!212 &50117555
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -717,6 +718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11157a5bbf367154c954eb77ab4ced1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelLoader: {fileID: 0}
 --- !u!60 &386857726
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1375,6 +1377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11157a5bbf367154c954eb77ab4ced1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelLoader: {fileID: 0}
 --- !u!60 &584590191
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2359,6 +2362,7 @@ MonoBehaviour:
   levelLoader: {fileID: 2072351437}
   dialogue: {fileID: 1815896882}
   pickupitems: {fileID: 927336199}
+  playerSprite: {fileID: 927336197}
 --- !u!114 &927336192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2924,6 +2928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11157a5bbf367154c954eb77ab4ced1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelLoader: {fileID: 0}
 --- !u!60 &985734525
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3581,6 +3586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11157a5bbf367154c954eb77ab4ced1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelLoader: {fileID: 0}
 --- !u!60 &1286612577
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4172,6 +4178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11157a5bbf367154c954eb77ab4ced1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelLoader: {fileID: 0}
 --- !u!4 &1475490234
 Transform:
   m_ObjectHideFlags: 0

@@ -11,9 +11,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private LevelLoader levelLoader;
     [SerializeField] private Dialogue dialogue;
     [SerializeField] private PickUpItems pickupitems;
-
-
-
+    [SerializeField] private SpriteRenderer playerSprite;
     #endregion
 
     #region Movement Variables
@@ -22,6 +20,7 @@ public class Movement : MonoBehaviour
     private float maxMovementSpeed = 10f;
     private float timeSinceLastStep = 1f;
     private float timeOnGround = 0f;
+    private bool isMovingLeft = false;
     public bool isActivelyMoving { get; private set; }
     #endregion
 
@@ -43,6 +42,7 @@ public class Movement : MonoBehaviour
             PlayerLanded();
             TrackGroundTime();
             EnterNextLevel();
+            FlipPlayer();
         }
     }
 
@@ -154,6 +154,8 @@ public class Movement : MonoBehaviour
     {
         if (inputManager.leftHeld && !inputManager.rightHeld)
         {
+            isMovingLeft = true;
+
             //Lock leftward movement until level 2
             if (SceneManager.GetActiveScene().buildIndex < 2)
             {
@@ -175,6 +177,7 @@ public class Movement : MonoBehaviour
         }
         else if (inputManager.rightHeld && !inputManager.leftHeld)
         {
+            isMovingLeft = false;
 
             if (playerRigidBody.velocity.x <= maxMovementSpeed)
             {
@@ -254,7 +257,6 @@ public class Movement : MonoBehaviour
             //enters next level if all collectables are picked or there are no collectables
             if (collisionDetection.touchingPortal)
             {
-
                 //Lock sfx until level 4
                 if (SceneManager.GetActiveScene().buildIndex >= 4 && (levelLoader.portalSoundPlayed == false))
                 {
@@ -263,17 +265,14 @@ public class Movement : MonoBehaviour
                 }
 
                 levelLoader.LoadNextLevel();
-
-
             }
-
         }
+
         else
         {
             //enters next level if all collectables are picked or there are no collectables
             if (collisionDetection.touchingPortal && pickupitems.collectables == 3)
             {
-
                 //Lock sfx until level 4
                 if (SceneManager.GetActiveScene().buildIndex >= 4 && (levelLoader.portalSoundPlayed == false))
                 {
@@ -282,11 +281,20 @@ public class Movement : MonoBehaviour
                 }
 
                 levelLoader.LoadNextLevel();
-
-
             }
         }
-       
-     
+    }
+
+    ///<Summary>Flips the players sprite based on which direction they were last moving in.</Summary>
+    private void FlipPlayer()
+    {
+        if(isMovingLeft)
+        {
+            playerSprite.flipX = true;
+        }
+        else
+        {
+            playerSprite.flipX = false;
+        }
     }
 }
