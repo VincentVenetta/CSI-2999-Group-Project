@@ -26,7 +26,7 @@ public class Movement : MonoBehaviour
     #endregion
 
     #region Jumping Variables
-    private float jumpForce = 17f;
+    private float jumpForce = 19f;
     private float wallJumpForce = 27f;
     private float timeInAir = 0f;
     private bool hasDoubleJumped = false;
@@ -35,7 +35,7 @@ public class Movement : MonoBehaviour
     private void Update()
     {
         //Disables movement during dialogue, but allows free movement until level 7
-        if (dialogue.canMove || SceneManager.GetActiveScene().buildIndex < 7)
+        if (dialogue.canMove || SceneManager.GetActiveScene().buildIndex < 7 && dialogue != null)
         {
             Jump();
             WallJump();
@@ -273,7 +273,7 @@ public class Movement : MonoBehaviour
         else
         {
             //enters next level if all collectables are picked or there are no collectables
-            if (collisionDetection.touchingPortal && pickupitems.collectables == 3)
+            if (collisionDetection.touchingPortal && pickupitems.collectibles == pickupitems.collectiblesNeeded)
             {
                 //Lock sfx until level 4
                 if (SceneManager.GetActiveScene().buildIndex >= 4 && (levelLoader.portalSoundPlayed == false))
@@ -331,7 +331,6 @@ public class Movement : MonoBehaviour
         //Falling animation
         if (!collisionDetection.isGrounded && playerRigidBody.velocity.y < 0)
         {
-            Debug.Log("test");
             playerAnimator.SetBool("Falling", true);
         }
         else
