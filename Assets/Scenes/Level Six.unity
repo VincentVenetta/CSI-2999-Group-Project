@@ -1398,6 +1398,7 @@ MonoBehaviour:
   levelLoader: {fileID: 2054537839}
   dialogue: {fileID: 259742734}
   pickupitems: {fileID: 0}
+  playerSprite: {fileID: 1675232683}
 --- !u!114 &1675232678
 MonoBehaviour:
   m_ObjectHideFlags: 0
