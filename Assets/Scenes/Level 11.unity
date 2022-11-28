@@ -10481,6 +10481,7 @@ MonoBehaviour:
   collectibles: 0
   collectiblesNeeded: 5
   scoreCounter: {fileID: 907311182}
+  audioManager: {fileID: 414749625}
 --- !u!114 &1056151981
 MonoBehaviour:
   m_ObjectHideFlags: 0

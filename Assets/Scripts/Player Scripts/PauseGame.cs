@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseGame : MonoBehaviour
 {
@@ -26,7 +27,12 @@ public class PauseGame : MonoBehaviour
                 Time.timeScale = 0f;
                 pauseMenu.SetActive(true);
                 isPaused = true;
-                audioManager.Play("Pause");
+
+                //Lock sfx until level 4
+                if (SceneManager.GetActiveScene().buildIndex >= 4)
+                {                   
+                    audioManager.Play("Pause");
+                }
             }
 
             else
@@ -34,7 +40,12 @@ public class PauseGame : MonoBehaviour
                 Time.timeScale = 1f;
                 pauseMenu.SetActive(false);
                 isPaused = false;
-                audioManager.Play("Unpause");
+
+                //Lock sfx until level 4
+                if (SceneManager.GetActiveScene().buildIndex >= 4)
+                {                   
+                    audioManager.Play("Unpause");
+                }
             }
         }
     }

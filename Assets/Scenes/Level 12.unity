@@ -2669,6 +2669,7 @@ MonoBehaviour:
   collectibles: 0
   collectiblesNeeded: 1
   scoreCounter: {fileID: 907311182}
+  audioManager: {fileID: 2060739663}
 --- !u!114 &1056151981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2894,7 +2895,7 @@ GameObject:
   - component: {fileID: 1116758090}
   - component: {fileID: 1116758089}
   m_Layer: 0
-  m_Name: Happy_1
+  m_Name: Grease_Monkey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2943,7 +2944,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: db38ce14b37338d4c93a0b3c4f0b5a2e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 806f5b33db30513489529ef9abf82412, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

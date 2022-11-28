@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenuButtonHandler : MonoBehaviour
 {
@@ -27,7 +28,13 @@ public class PauseMenuButtonHandler : MonoBehaviour
     public void OnResumeButtonPressed()
     {
         pauseMenu.SetActive(false);
-        audioManager.Play("Unpause");
+
+        //Lock sfx until level 4
+        if (SceneManager.GetActiveScene().buildIndex >= 4)
+        {                   
+            audioManager.Play("Unpause");
+        }
+
         pauseGame.isPaused = false;
         Time.timeScale = 1f;
     }
