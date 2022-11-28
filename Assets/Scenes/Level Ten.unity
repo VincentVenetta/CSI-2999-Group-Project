@@ -2562,7 +2562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectibles: 0
-  collectiblesNeeded: 0
+  collectiblesNeeded: 3
   scoreCounter: {fileID: 907311182}
 --- !u!1 &928731311
 GameObject:
