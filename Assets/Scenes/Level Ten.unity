@@ -969,7 +969,7 @@ GameObject:
   - component: {fileID: 436476097}
   m_Layer: 0
   m_Name: gem (2)
-  m_TagString: collectable
+  m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2056,7 +2056,7 @@ GameObject:
   - component: {fileID: 818036789}
   m_Layer: 0
   m_Name: gem
-  m_TagString: collectable
+  m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2398,6 +2398,7 @@ MonoBehaviour:
   dialogue: {fileID: 1815896882}
   pickupitems: {fileID: 927336199}
   playerSprite: {fileID: 927336197}
+  playerAnimator: {fileID: 0}
 --- !u!114 &927336192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2560,7 +2561,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 713ba8c8ac0baba4193a4dfcca00960e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectables: 0
+  collectibles: 0
+  collectiblesNeeded: 3
   scoreCounter: {fileID: 907311182}
 --- !u!1 &928731311
 GameObject:
@@ -4294,7 +4296,7 @@ GameObject:
   - component: {fileID: 1562383863}
   m_Layer: 0
   m_Name: gem (1)
-  m_TagString: collectable
+  m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -12,11 +12,12 @@ public class Movement : MonoBehaviour
     [SerializeField] private Dialogue dialogue;
     [SerializeField] private PickUpItems pickupitems;
     [SerializeField] private SpriteRenderer playerSprite;
+    [SerializeField] private Animator playerAnimator;
     #endregion
 
     #region Movement Variables
     private float accelerationRate = 14f;
-    private float decelerationRate = 1.05f;
+    private float decelerationRate = 1.3f;
     private float maxMovementSpeed = 10f;
     private float timeSinceLastStep = 1f;
     private float timeOnGround = 0f;
@@ -25,7 +26,7 @@ public class Movement : MonoBehaviour
     #endregion
 
     #region Jumping Variables
-    private float jumpForce = 17f;
+    private float jumpForce = 19f;
     private float wallJumpForce = 27f;
     private float timeInAir = 0f;
     private bool hasDoubleJumped = false;
@@ -34,7 +35,7 @@ public class Movement : MonoBehaviour
     private void Update()
     {
         //Disables movement during dialogue, but allows free movement until level 7
-        if (dialogue.canMove || SceneManager.GetActiveScene().buildIndex < 7)
+        if (dialogue.canMove || SceneManager.GetActiveScene().buildIndex < 7 && dialogue != null)
         {
             Jump();
             WallJump();
@@ -43,6 +44,7 @@ public class Movement : MonoBehaviour
             TrackGroundTime();
             EnterNextLevel();
             FlipPlayer();
+            Animation();
         }
     }
 
@@ -201,7 +203,7 @@ public class Movement : MonoBehaviour
     ///<Summary>Decelerates the player when not actively moving.</Summary>
     private void Decelerate()
     {
-        if (!isActivelyMoving && (Mathf.Abs(playerRigidBody.velocity.x) > 0f))
+        if (!isActivelyMoving && (Mathf.Abs(playerRigidBody.velocity.x) > 0f) && collisionDetection.isGrounded)
         {
             //Snap horizontal velocity to zero when close enough
             if (Mathf.Abs(playerRigidBody.velocity.x) <= 0.05f)
@@ -271,7 +273,7 @@ public class Movement : MonoBehaviour
         else
         {
             //enters next level if all collectables are picked or there are no collectables
-            if (collisionDetection.touchingPortal && pickupitems.collectables == 3)
+            if (collisionDetection.touchingPortal && pickupitems.collectibles == pickupitems.collectiblesNeeded)
             {
                 //Lock sfx until level 4
                 if (SceneManager.GetActiveScene().buildIndex >= 4 && (levelLoader.portalSoundPlayed == false))
@@ -288,13 +290,52 @@ public class Movement : MonoBehaviour
     ///<Summary>Flips the players sprite based on which direction they were last moving in.</Summary>
     private void FlipPlayer()
     {
-        if(isMovingLeft)
+        if (isMovingLeft)
         {
             playerSprite.flipX = true;
         }
         else
         {
             playerSprite.flipX = false;
+        }
+    }
+
+    ///<Summary>Handle the animation for the player sprite.</Summary>
+    private void Animation()
+    {
+        if (playerAnimator == null)
+        {
+            return;
+        }
+
+        //Run animation
+        if (collisionDetection.isGrounded)
+        {  
+            playerAnimator.SetFloat("Move Speed", Mathf.Abs(playerRigidBody.velocity.x));
+        }
+        else
+        {
+            playerAnimator.SetFloat("Move Speed", 0f);
+        }
+
+        //Jump animation
+        if (!collisionDetection.isGrounded && playerRigidBody.velocity.y > 0)
+        {
+            playerAnimator.SetBool("Jumping", true);
+        }
+        else
+        {
+            playerAnimator.SetBool("Jumping", false);
+        }
+        
+        //Falling animation
+        if (!collisionDetection.isGrounded && playerRigidBody.velocity.y < 0)
+        {
+            playerAnimator.SetBool("Falling", true);
+        }
+        else
+        {
+            playerAnimator.SetBool("Falling", false);
         }
     }
 }
