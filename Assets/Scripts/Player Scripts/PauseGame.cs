@@ -5,7 +5,7 @@ public class PauseGame : MonoBehaviour
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private InputManager inputManager;
     [SerializeField] private AudioManager audioManager;
-    private bool isPaused;
+    public bool isPaused;
 
     private void Awake()
     {
@@ -23,6 +23,7 @@ public class PauseGame : MonoBehaviour
         {
             if (!isPaused)
             {
+                Time.timeScale = 0f;
                 pauseMenu.SetActive(true);
                 isPaused = true;
                 audioManager.Play("Pause");
@@ -30,6 +31,7 @@ public class PauseGame : MonoBehaviour
 
             else
             {
+                Time.timeScale = 1f;
                 pauseMenu.SetActive(false);
                 isPaused = false;
                 audioManager.Play("Unpause");
