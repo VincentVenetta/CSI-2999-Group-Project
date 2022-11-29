@@ -19,11 +19,10 @@ public class Dialogue : MonoBehaviour
         {
             StartCoroutine(Type());
             
-         
-        }
-        if (textDisplay.text == sentences[index])
-        {
-            continueButton.SetActive(true);
+            if (textDisplay.text == sentences[index])
+            {
+                continueButton.SetActive(true);
+            }
         }
     }
 
