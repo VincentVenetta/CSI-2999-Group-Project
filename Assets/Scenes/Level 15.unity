@@ -18830,7 +18830,7 @@ GameObject:
   - component: {fileID: 1116758090}
   - component: {fileID: 1116758089}
   m_Layer: 0
-  m_Name: Grease_Monkey
+  m_Name: Opium
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18879,7 +18879,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 806f5b33db30513489529ef9abf82412, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2ee44fc3426a5644d8d2d508790c4b10, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -22541,9 +22541,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 928731313}
   sentences:
-  - I'm so sorry about that last level. (Not!)
-  - As an apology, I'd like to offer some proper game art.
-  - Enjoy a little break.
+  - You're at the end of the road.
+  - The final stretch.
+  - Go. And bring this story to a close...
   typingSpeed: 0.02
   canMove: 0
   DialogueBox: {fileID: 1084139650}

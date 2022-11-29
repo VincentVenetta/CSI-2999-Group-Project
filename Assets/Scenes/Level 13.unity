@@ -6952,7 +6952,7 @@ GameObject:
   - component: {fileID: 1116758090}
   - component: {fileID: 1116758089}
   m_Layer: 0
-  m_Name: Grease_Monkey
+  m_Name: Analog_Boys2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7001,7 +7001,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 806f5b33db30513489529ef9abf82412, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b60b14c36701d78489713bb0ab698857, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -10372,8 +10372,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 928731313}
   sentences:
-  - And finally, moving platforms and fireballs!
-  - Best not touch them firey bois, I'm warnin ye
+  - Now for some fireballs and moving platforms, though you won't move with them
+    so take care.
+  - Best not touch them firey rascals, I'm warnin ye
   typingSpeed: 0.02
   canMove: 0
   DialogueBox: {fileID: 1084139650}
