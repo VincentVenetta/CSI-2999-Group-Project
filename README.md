@@ -1,7 +1,17 @@
 # CSI-2999-Group-Project
+----------------------
+Pre-requisite Software
+----------------------
+1. .NET Framework Developer 4.7.1
+2. Unity (Specifically version 2021.1.16f1)
+3. Visual Studio Code (Recommended for coding in.)
+        -C# Extension for VSCode (If auto-complete is not working you may need to downgrade the extension to a prior version.)
 
-
-
+----------------------
+Recommended Software
+----------------------
+1. paint.net (For editing and creating sprites/art for the game.)
+2. Audacity (For adjusting and performing edits on game audio and music.)
 
 ----------------------------------
 Unity Workspace Setup Instructions
