@@ -5,7 +5,7 @@ Pre-requisite Software
 1. .NET Framework Developer 4.7.1
 2. Unity (Specifically version 2021.1.16f1)
 3. Visual Studio Code (Recommended for coding in.)
-    -C# Extension for VSCode (If auto-complete is not working you may need to downgrade the extension to a prior version.)
+- C# Extension for VSCode (If auto-complete is not working you may need to downgrade the extension to a prior version.)
 
 ----------------------
 Recommended Software
