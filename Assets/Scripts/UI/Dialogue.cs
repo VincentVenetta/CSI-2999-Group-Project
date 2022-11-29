@@ -18,13 +18,13 @@ public class Dialogue : MonoBehaviour
         if(DialogueBox != null)
         {
             StartCoroutine(Type());
-            
-         
+            //Shows the button after each sentence
+            if (textDisplay.text == sentences[index])
+            {
+                continueButton.SetActive(true);
+            }
         }
-        if (textDisplay.text == sentences[index])
-        {
-            continueButton.SetActive(true);
-        }
+
     }
 
     void Update()
