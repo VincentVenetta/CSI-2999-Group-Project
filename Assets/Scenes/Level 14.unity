@@ -4351,9 +4351,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 928731313}
   sentences:
-  - I'm so sorry about that last level. (Not!)
-  - As an apology, I'd like to offer some proper game art.
-  - Enjoy a little break.
+  - Time for a climb!
+  - Watch your step and be sure to stick the landing.
   typingSpeed: 0.02
   canMove: 0
   DialogueBox: {fileID: 1084139650}
