@@ -1,4 +1,13 @@
 # CSI-2999-Group-Project
+-------------------
+Project Description
+-------------------
+The premise of the project was to have the gameplay, mechanics, and art evolve as the player completes each level, culminating into a final level complete with all the mechanics a standard 2D platformer would have.
+
+Features: 15 levels, evolving gameplay, and more.
+
+Developed by: Vincent Venetta, Kyle Unger, Benjamin Jennings, and Mariel Hoxha
+
 ----------------------
 Pre-requisite Software
 ----------------------
@@ -7,9 +16,9 @@ Pre-requisite Software
 3. Visual Studio Code (Recommended for coding in.)
 - C# Extension for VSCode (If auto-complete is not working you may need to downgrade the extension to a prior version.)
 
-----------------------
+--------------------
 Recommended Software
-----------------------
+--------------------
 1. paint.net (For editing and creating sprites/art for the game.)
 2. Audacity (For adjusting and performing edits on game audio and music.)
 
