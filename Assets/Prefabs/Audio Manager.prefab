@@ -51,7 +51,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Player Walk
     clip: {fileID: 8300000, guid: 711a93f2cfdb9d249ac3723594fdc853, type: 3}
-    volume: 1
+    volume: 0.4
     pitch: 1
     source: {fileID: 0}
   - name: Player Landed
