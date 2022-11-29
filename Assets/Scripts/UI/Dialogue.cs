@@ -18,12 +18,17 @@ public class Dialogue : MonoBehaviour
         if(DialogueBox != null)
         {
             StartCoroutine(Type());
+<<<<<<< Updated upstream
             
+=======
+            //Shows the button after each sentence
+>>>>>>> Stashed changes
             if (textDisplay.text == sentences[index])
             {
                 continueButton.SetActive(true);
             }
         }
+
     }
 
     void Update()
