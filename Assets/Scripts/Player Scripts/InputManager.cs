@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
+    #region Reference Variables
     private InputController inputController;
+    #endregion
 
     #region Input Variables
     public bool upPressed { get; private set; }
@@ -20,37 +22,36 @@ public class InputManager : MonoBehaviour
     public bool rightPressed { get; private set; }
     public bool rightHeld { get; private set; }
     public bool rightReleased { get; private set; }
+
+    public bool pausePressed { get; private set; }
+    public bool pauseHeld { get; private set; }
+    public bool pauseReleased { get; private set; }
     #endregion
 
-    // Called when the script is loaded or enabled
     private void Awake()
     {
         inputController = new InputController();
         SetupInputs();
     }
 
-    // Called when the script is enabled
     private void OnEnable()
     {
         inputController.Enable();
     }
 
-    // Called when the script is disabled
     private void OnDisable()
     {
         inputController.Disable();
     }
 
-    // Called once per frame
     void Update()
     {
         GetHeldInputs();
     }
 
-    // Called towards the end of execution order
     private void LateUpdate()
     {
-        ResetInputs(); //Inputs reset in LateUpdate() to allow other scripts to read them on time
+        ResetInputs(); //Inputs reset in LateUpdate() to allow other scripts to read them in their update method
     }
 
     ///<Summary>Setup callback functions for retrieving player input.</Summary>
@@ -67,6 +68,9 @@ public class InputManager : MonoBehaviour
 
         inputController.PlayerActions.Right.started += ctx => rightPressed = true;
         inputController.PlayerActions.Right.canceled += ctx => rightReleased = true;
+
+        inputController.PlayerActions.Pause.started += ctx => pausePressed = true;
+        inputController.PlayerActions.Pause.canceled += ctx => pauseReleased = true;
     }
 
     ///<Summary>Find whether or not a button is being held down by the player.</Summary>
@@ -79,6 +83,8 @@ public class InputManager : MonoBehaviour
         leftHeld = (inputController.PlayerActions.Left.ReadValue<float>() == 1f) ? true : false;
         
         rightHeld = (inputController.PlayerActions.Right.ReadValue<float>() == 1f) ? true : false;
+
+        pauseHeld = (inputController.PlayerActions.Pause.ReadValue<float>() == 1f) ? true : false;
     }
 
     ///<Summary>Reset player input booleans to false after they're read.</Summary>
@@ -95,5 +101,8 @@ public class InputManager : MonoBehaviour
 
         rightPressed = false;
         rightReleased = false;
+
+        pausePressed = false;
+        pauseReleased = false;
     }
 }

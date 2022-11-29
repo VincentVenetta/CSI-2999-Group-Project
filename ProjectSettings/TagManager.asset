@@ -3,17 +3,20 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Collectible
+  - platform
+  - enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Ground
+  - Screen Fader
+  - Portal
   - 
   - 
   - 
@@ -38,6 +41,27 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: background
+    uniqueID: 3284232979
+    locked: 0
+  - name: middle
+    uniqueID: 3010004177
+    locked: 0
+  - name: middlefront
+    uniqueID: 436242355
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: portal
+    uniqueID: 1838373257
+    locked: 0
+  - name: player
+    uniqueID: 3896217765
+    locked: 0
+  - name: foreground
+    uniqueID: 1573122581
+    locked: 0
+  - name: 
+    uniqueID: 2720198733
     locked: 0
