@@ -571,20 +571,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1881359062}
-        m_TargetAssemblyTypeName: MainMenuButtonHandler, Assembly-CSharp
-        m_MethodName: OnCreditsButtonPressed
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1881359062}
-        m_TargetAssemblyTypeName: MainMenuButtonHandler, Assembly-CSharp
-        m_MethodName: PlayClickOne
+        m_TargetAssemblyTypeName: EndScreenButtonHandler, Assembly-CSharp
+        m_MethodName: OnMainMenuButtonPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6007,15 +5995,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1881359061}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e0239de7c149ec4eba78fd500b383ce, type: 3}
+  m_Script: {fileID: 11500000, guid: 407c47fd6bd1b9e4284c3cd1477a9464, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   levelLoader: {fileID: 2138652669}
   audioManager: {fileID: 1908373994}
-  mainMenu: {fileID: 1442835178}
-  levelMenu: {fileID: 0}
-  creditsMenu: {fileID: 0}
-  settingsMenu: {fileID: 0}
 --- !u!4 &1881359063
 Transform:
   m_ObjectHideFlags: 0
@@ -6125,7 +6109,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1881359062}
-        m_TargetAssemblyTypeName: MainMenuButtonHandler, Assembly-CSharp
+        m_TargetAssemblyTypeName: EndScreenButtonHandler, Assembly-CSharp
         m_MethodName: OnQuitButtonPressed
         m_Mode: 1
         m_Arguments:
