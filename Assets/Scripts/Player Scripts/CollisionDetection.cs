@@ -21,6 +21,10 @@ public class CollisionDetection : MonoBehaviour
         wallLeft = CheckForLeftWall();
         wallRight = CheckForRightWall();
         touchingPortal = CheckIfTouchingPortal();
+
+        
+
+
     }
 
     ///<Summary>Check a circular region under the player to see if they're on the ground.</Summary>
@@ -32,6 +36,9 @@ public class CollisionDetection : MonoBehaviour
         if (Physics2D.OverlapBox(point, size, 0f, groundLayer))
         {
             return true;
+
+         
+
         }
 
         return false;
@@ -76,4 +83,6 @@ public class CollisionDetection : MonoBehaviour
 
         return false;
     }
+
+  
 }
